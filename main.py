@@ -59,11 +59,11 @@ class Answer(webapp2.RequestHandler):
         answer2 = encrypt(text, int(rotation))
 
         rotationDone = """
-        <form>
+        <form action="/answer" method="post">
             <label for="rotation1">Rotate By:</label>
-                <input type="text" value='"""+ rotation + """'></input>
+                <input type="text" name="rotation1" value='"""+ rotation + """'></input>
                 <p class="error"></p>
-            <textarea type="text">""" + answer2 + """</textarea>
+            <textarea type="text" name="text1">""" + answer2 + """</textarea>
             <br>
             <input type="submit"></input>
         </form>
