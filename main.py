@@ -42,7 +42,7 @@ class Index(webapp2.RequestHandler):
         rotation = """
         <form action="/answer" method="post">
             <label for="rotation1">Rotate By:</label>
-                <input name="rotation1" type="number" value="0">
+                <input name="rotation1" type="text" value="0">
                 <p class="error"></p>
             <textarea type="text" name="text1"></textarea>
             <br>
@@ -61,7 +61,7 @@ class Answer(webapp2.RequestHandler):
         rotationDone = """
         <form>
             <label for="rotation1">Rotate By:</label>
-                <input type="number>""" + rotation + """</input>
+                <input type="text" value='"""+ rotation + """'></input>
                 <p class="error"></p>
             <textarea type="text">""" + answer2 + """</textarea>
             <br>
